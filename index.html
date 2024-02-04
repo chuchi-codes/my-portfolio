@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Chuchi's Portfolio</title>
+		<meta charset="utf-8">
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="assets/css/main.css">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">Chuchi</a>
+					<nav id="nav">
+						<a href="index.html">About</a>
+						<a href="#three">Projects</a>
+						<a href="#footer">Contact</a>
+					</nav>
+				</div>
+			</header>
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Banner -->
+			<section id="banner" style="background-image: url('./images/banner.jpg');" >
+				<div class="inner">
+					<h1>Lets start with a joke please check out my projects just below </h1>
+					
+					<div id="joke-container">
+						<h3 id="joke-text">Loading...</h3>
+						<!-- <p id="joke-text">Loading...</p> -->
+					</div>
+				
+					<script>
+						// Function to fetch and display a joke
+						async function fetchJoke() {
+							try {
+								const response = await fetch('https://v2.jokeapi.dev/joke/Programming');
+								const data = await response.json();
+								const jokeText = data.joke || (data.setup + ' ' + data.delivery);
+								document.getElementById('joke-text').textContent = jokeText;
+							} catch (error) {
+								console.error('Error fetching joke:', error);
+							}
+						}
+				
+						// Load a new joke when the page is loaded
+						window.addEventListener('load', fetchJoke);
+					</script>
+						
+						<!--DOCUMENTATION IS LIKE SEX: WHEN IT'S GOOD, IT'S VERY GOOD. WHEN IT'S BAD, IT'S BETTER THAN NOTHING... I HAVE A JOKE ABOUT STACK OVERFLOW, BUT YOU WOULD SAY IT'S A DUPLICATE.  WHY DO PYTHON PROGRAMMERS WEAR GLASSES? BECAUSE THEY CAN'T C. -->
+
+						<!-- Add a button to reload the page -->
+   					 <button id="reload-button" class="button alt">Get New Joke</button>
+					<button id="reload-button" class="button alt"><a href="#three">Go To Projects</a></button>
+
+					<script>
+						// Function to fetch and display a joke
+						async function fetchJoke() {
+							try {
+								const response = await fetch('https://v2.jokeapi.dev/joke/Programming');
+								const data = await response.json();
+								if (data.error) {
+									document.getElementById('joke-text').textContent = 'Failed to fetch joke.';
+								} else {
+									const jokeText = data.joke || (data.setup + ' ' + data.delivery);
+									document.getElementById('joke-text').textContent = jokeText || 'No joke available.';
+								}
+							} catch (error) {
+								console.error('Error fetching joke:', error);
+								document.getElementById('joke-text').textContent = 'Error fetching joke.';
+							}
+						}
+
+						// Load a new joke when the page is loaded
+						window.addEventListener('load', fetchJoke);
+
+						// Add click event listener to the button to reload the page
+						document.getElementById('reload-button').addEventListener('click', function() {
+							location.reload(); // Reload the page
+						});
+					</script>
+
+								</div>
+			</section>
+
+
+			
+		<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header>
+						<h2>Languages and technology I work with </h2>
+					</header>
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JAVASCRIPT</li>
+						<li>C++</li>
+						<li>PYTHON</li>
+						<li>R</li>
+						<li>EXCEL</li>
+						<li>GITHUB</li>
+						<li>GOOGLE COLAB</li>
+						<li>JUPTER NOTEBOOK</li>
+					</ul>
+		
+					<!-- <ul class="actions">
+						<li><a href="#" class="button alt">Learn More</a></li>
+					</ul> -->
+				</div>
+			</section>
+		
+		<!-- Three -->
+			<section id="three">
+				<div class="inner">
+					
+					<article>
+						<div class="content">
+							<img src="./images/port1.png" alt="" >	
+							<header>
+								<h3>Single page website Demitri’s Greek Food </h3>
+							</header>
+							<h5>Stack: HTML, CSS, JS</h5>
+							<p>This is a responsive one-page website for Greek restaurant Dimitris with HTML CSS and JavaScript</p>
+							<div class="flex-container">
+							<ul class="actions">
+								<li><a href="https://chuchi-codes.github.io/Dimitris-Greek-Food/" target="_blank" class="button alt">Demo Is Here</a></li>
+							</ul>
+							<ul  class="actions">
+								<li><a href="https://github.com/chuchi-codes/Dimitris-Greek-Food" target="_blank" class="button alt">Code Is Here</a></li>
+							</ul>
+							</div>
+						</div>
+					</article>
+
+					<article>
+						<div class="content">
+							<img src="./images/port2.1.png" alt="" >	
+							<header>
+								<h3>Youtube Channel total video watch Length </h3>
+							</header>
+							<h5>Stack: Python, COLAB</h5>
+							<p>User inputs Youtube channel ID app will show total videos uploaded and total length of all videos uploaded </p>
+							<div class="flex-container">
+							<ul class="actions">
+								<li><a href="https://colab.research.google.com/drive/1MUzMQf6qTzUVw1pKSAuPkXDH7uR-28KS?usp=sharing" target="_blank" class="button alt">Demo Is Here</a></li>
+							</ul>
+							<ul  class="actions">
+								<li><a href="https://github.com/chuchi-codes/my-portfolio/blob/main/youtubetotaluploadedtime.py" target="_blank" class="button alt">Code Is Here</a></li>
+							</ul>
+							</div>
+
+						</div>
+					</article>
+
+					<article>
+						<div class="content">
+							<img src="./images/port3.png" alt="" width="200" height="150">	
+							<header>
+								<h3>Grade Calculator</h3>
+							</header>
+							<h5>Stack: C++</h5>
+							<p> Program that defines and tests a class called COP3014 Input user values and default values</p>
+							
+							<div class="flex-container">
+							<ul class="actions">
+								<li><a href="#" target="_blank" class="button alt">Demo Is Here</a></li>
+							</ul>
+							<ul  class="actions">
+								<li><a href="https://github.com/chuchi-codes/my-portfolio/blob/main/gradecalculator.cpp" target="_blank" class="button alt">Code Is Here</a></li>
+							</ul>
+							</div>
+
+						</div>
+					</article>
+
+				</div>
+			</section>
+
+			<section id="three">
+				<div class="inner">
+					<article>
+						<div class="content">
+							<img src="./images/port4.png" alt="" width="292" height="292">	
+							<header>
+								<h3>Until Next Birthday</h3>
+							</header>
+							<h5>Stack: C++</h5>
+							<p>Find out how many days until your next birthday.</p>
+							<br>
+							<br>
+							
+							<div class="flex-container">
+							<ul class="actions">
+								<li><a href="#" class="button alt">Demo Is Here</a></li>
+							</ul>
+							<ul  class="actions">
+								<li><a href="#" class="button alt">Code Is Here</a></li>
+							</ul>
+							</div>
+
+						</div>
+					</article>
+
+					<article>
+						<div class="content">
+							<img src="./images/port5.1.png" alt="" >	
+							<header>
+								<h3>Exploratory Data Analysis & Visualisation iris dataset </h3>
+							</header>
+							<h5>Stack: Python JUPTER NOTEBOOK </h5>
+							<p> Python script using scikit-learn to perform Linear Discriminant Analysis (LDA) – K-fold Cross-validation Linear Model Selection  model using the following statistics: Cp AIC
+								Adjusted R^2 BIC Statistics andnLasso and Ridge Regularization on the Iris dataset</p>
+							<div class="flex-container">
+							<ul class="actions">
+								<li><a href="https://chuchi-codes.github.io/Dimitris-Greek-Food/" target="_blank" class="button alt">Demo Is Here</a></li>
+							</ul>
+							<ul  class="actions">
+								<li><a href="https://github.com/chuchi-codes/Dimitris-Greek-Food" target="_blank" class="button alt">Code Is Here</a></li>
+							</ul>
+							</div>
+
+						</div>
+					</article>
+
+					<article>
+						<div class="content">
+							<img src="./images/port1.png" alt="" >	
+							<header>
+								<h3>Exploratory Data Analysis nycflights13 & WHO global tuberculosis (TB) </h3>
+							</header>
+							<h5>Stack: R</h5>
+							<p>This is a responsive one-page website for Greek restaurant Dimitris with HTML CSS and JavaScript</p>
+							<div class="flex-container">
+							<ul class="actions">
+								<li><a href="https://chuchi-codes.github.io/Dimitris-Greek-Food/" target="_blank" class="button alt">Demo Is Here</a></li>
+							</ul>
+							<ul  class="actions">
+								<li><a href="https://github.com/chuchi-codes/Dimitris-Greek-Food" target="_blank" class="button alt">Code Is Here</a></li>
+							</ul>
+							</div>
+
+						</div>
+					</article>
+
+
+
+				</div>
+			</section>
+
+
+			</section> 
+
+						<!-- Footer -->
+						<footer id="footer">
+							<div class="inner">
+								<h2>Contact</h2>
+								<p> You can contact me with email and feel free to check out my LinkedIn profile as well as my Github Thank You. </p>
+								<!--icons from fontawsome -->
+									<ul class="icons">
+			
+					  					<li><a target="_blank" href="mailto:saguiar2018@fau.edu" class="icon fa-envelope"><span class="label">Email</span></a></li>
+
+					  					<li><a  target="_blank" href="https://www.linkedin.com/in/sarai-aguiar-76aa7a1a9/" class="icon fa-linkedin"><span class="label">Linked In</span></a></li>
+					 			 		
+					 			 		<li><a  target="_blank" href="https://github.com/ChuchiLindo" class="icon fa-github-square"><span class="label">GitHub</span></a></li>
+									</ul>
+									
+									<p class="copyright">Chuchi</p>
+									
+								</div>
+						</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
+
+
+    
+
