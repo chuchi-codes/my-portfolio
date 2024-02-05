@@ -82,27 +82,61 @@ public:
 
 //main 
 int main() {
-    //sample to test 
-    // ------------------Student 1 --------------
+//sample to test 
+// ------------------Student 1 input--------------
 
-    COP3014 student1("Steve", "Jacobs", "Z12890249");
-    student1.setQuiz1(20);
-    student1.setQuiz2(20);
-    student1.setQuiz3(10);
+COP3014 student1;
 
-    // Set midterm and final exam grades
-    student1.setMidterm(10);
-    student1.setFinalExam(100);
+// User input for student1
+cout << "Enter details for Student 1:" << endl;
+string fname, lname, znum;
+int q1, q2, q3, midterm, finalExam;
 
-    // Compute the total grade and letter grade
-    student1.computeTotalGrade();
-    student1.checkAbsences();
-    student1.computeLetterGrade();
+cout << "First Name: ";
+cin >> fname;
+student1.setFirstName(fname);
 
-    // Print student information and grades
-    student1.printInfo();
+cout << "Last Name: ";
+cin >> lname;
+student1.setLastName(lname);
 
-    cout << endl;
+cout << "Z Number: ";
+cin >> znum;
+student1.setZNumber(znum);
+
+cout << "Quiz 1: ";
+cin >> q1;
+student1.setQuiz1(q1);
+
+cout << "Quiz 2: ";
+cin >> q2;
+student1.setQuiz2(q2);
+
+cout << "Quiz 3: ";
+cin >> q3;
+student1.setQuiz3(q3);
+
+cout << "Midterm: ";
+cin >> midterm;
+student1.setMidterm(midterm);
+
+cout << "Final Exam: ";
+
+cin >> finalExam;
+
+cout << endl;
+
+student1.setFinalExam(finalExam);
+
+// Compute the total grade and letter grade
+student1.computeTotalGrade();
+student1.checkAbsences();
+student1.computeLetterGrade();
+
+// Print student information and grades
+student1.printInfo();
+
+cout << endl;
 
     // ------------------Student 2 --------------
 
